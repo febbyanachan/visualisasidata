@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box; /* Memastikan ukuran elemen dihitung dengan baik */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bg1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    height: 1000px;
+    background-color: #90cde9;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin: 0 0 20px 0;
+}
+
+.sidebar label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 5px;
+}
+
+.chart-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.chart-container canvas {
+    transition: transform 0.2s ease; /* Efek transisi */
+}
+
+.chart-container canvas:hover {
+    transform: scale(1.05); /* Meningkatkan ukuran canvas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+}
+
+
+h1, h2 {
+    color: #02014d;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333; /* Ganti dengan warna yang diinginkan */
+}
+
+.filter-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0953f5;
+    background-color: #96c1e7; /* Ganti dengan warna latar belakang yang diinginkan */
+    color: #001055; /* Ganti dengan warna teks yang diinginkan */
+    transition: border-color 0.3s;
+}
+
+.filter-select:focus {
+    border-color: #007bff; /* Ganti dengan warna border saat fokus */
+}
+
+.team-members {
+    list-style-type: none; /* Menghilangkan bullet point */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+.team-members li {
+    margin: 5px 0; /* Memberikan jarak antar nama anggota */
+    color: #001950; /* Ganti dengan warna teks yang diinginkan */
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #333;
+}
+
+.charts-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chart-box {
+    background-color: #bedbf7; /* Ubah kode warna di sini */
+    border: 1px solid #03157c; /* Tambahkan border untuk membedakan container */
+    padding: 20px; /* Tambahkan padding di dalam container */
+    border-radius: 10px; /* Sudut melingkar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    max-width: 500px; /* Ukuran maksimal container */
+    width: 400px; /* Ukuran tetap untuk semua chart */
+    height: 480px; /* Ukuran tetap untuk semua chart */
+    text-align: center; /* Pusatkan teks di dalam container */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi untuk transformasi dan bayangan */
+}
+
+canvas {
+    max-width: 100%; /* Ukuran maksimal canvas */
+    width: 100%; /* Membuat canvas responsif */
+}
+
+.judul-container {
+    width: 100%;
+    padding: 5px;
+    background-color: #68a3fc;
+    border: 1px solid #002064; /* Tambahkan border untuk visibilitas */
+    text-align: center; /* Rata tengah teks */
+}
+
+.judul-container h1 {
+    font-family: 'Montserrat', sans-serif; /* Ubah jenis font di sini */
+    color: #000000; /* Ubah warna font di sini */
+    font-size: 2em; /* Ubah ukuran font sesuai kebutuhan */
+}
+
+/*untuk tabel*/
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Memberikan jarak atas */
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #03157c; /* Border untuk sel */
+    padding: 12px; /* Padding untuk sel */
+    text-align: center; /* Rata kiri teks */
+}
+
+.data-table th {
+    background-color: #68a3fc; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Warna latar belakang untuk baris genap */
+}
+
+.data-table tr:hover {
+    background-color: #bedbf7; /* Warna saat hover pada baris */
+}
+
+.juduldata-container {
+    width: 100%;
+    padding: 5px;
+    background-color: #adceff;
+    border: 1px solid #002064; /* Tambahkan border untuk visibilitas */
+    text-align: center; /* Rata tengah teks */
+}
+
+.data-container {
+    display: flex;
+    height: 15vh;
+}
+
+.filter-select-data {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #0953f5;
+    background-color: #96c1e7; /* Ganti dengan warna latar belakang yang diinginkan */
+    color: #001055; /* Ganti dengan warna teks yang diinginkan */
+    transition: border-color 0.3s;
+    margin-top: 5px; /* Jarak antara judul kolom dan filter */
+    height: 100px; /* Tinggi untuk memungkinkan scroll */
+    overflow-y: auto; /* Scroll jika terlalu banyak opsi */
+}
+
+.filter-select-data:focus {
+    border-color: #007bff; /* Ganti dengan warna border saat fokus */
+}
+
+.data-table th {
+    position: relative; /* Agar filter bisa ditempatkan dengan baik */
+}
+
+.data-table th select {
+    position: absolute; /* Mengatur posisi agar tetap di header */
+    top: 5px; /* Jarak dari header */
+    left: 0;
+    right: 0;
+    z-index: 1; /* Pastikan di atas elemen lain */
+}
+
+.data-button{
+    text-decoration: none; 
+    color: #010046; 
+    background-color: #84bdfa; 
+    padding: 10px 15px; 
+    border-radius: 5px;
+}
+
+.back-button {
+    position: absolute; /* Buat posisi absolut */
+    top: 30px; /* Jarak dari atas */
+    left: 20px; /* Jarak dari kiri */
+    z-index: 1000; /* Pastikan berada di atas elemen lainnya */
+    color: #010046; 
+    background-color: #84bdfa; 
+    padding: 10px 15px; 
+    border-radius: 5px;
+}
